@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gnboorse/centipede"
+	"github.com/tommyknows/centipede"
 )
 
 // MapColoringAustralia simple implementation of the map coloring problem for Australia

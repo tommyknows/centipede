@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gnboorse/centipede"
+	"github.com/tommyknows/centipede"
 )
 
 // IntegerConstraints basic example of using int constraints

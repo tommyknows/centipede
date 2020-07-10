@@ -32,11 +32,12 @@ type VariablesConstraintFunction func(variables *Variables) bool
 
 // AllSatisfied check if a collection of Constraints are satisfied
 func (constraints *Constraints) AllSatisfied(variables *Variables) bool {
-	flag := true
 	for _, constraint := range *constraints {
-		flag = flag && constraint.Satisfied(variables)
+		if !constraint.Satisfied(variables) {
+			return false
+		}
 	}
-	return flag
+	return true
 }
 
 // FilterByName return all constraints related to a particular variable name

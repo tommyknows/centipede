@@ -58,7 +58,7 @@ func IntRangeStep(start int, end int, step int) Domain {
 	if mod > 0 {
 		rangeLength++
 	}
-	domain := make(Domain, rangeLength, rangeLength)
+	domain := make(Domain, rangeLength)
 	for i := int(0); i < rangeLength; i++ {
 		domain[i] = i*step + start
 	}
@@ -80,7 +80,7 @@ func TimeRangeStep(start time.Time, end time.Time, step time.Duration) Domain {
 		rangeLength++
 	}
 	// populate domain with units from beginning to end
-	domain := make(Domain, rangeLength, rangeLength)
+	domain := make(Domain, rangeLength)
 	for i := time.Duration(0); i < rangeLength; i++ {
 		domain[i] = start.Add(i * step)
 	}
@@ -95,7 +95,7 @@ func FloatRange(start float64, end float64) Domain {
 // FloatRangeStep returns a slice of integers in the desired range with the given step
 func FloatRangeStep(start float64, end float64, step float64) Domain {
 	rangeLength := int(math.Ceil((end - start) / step))
-	domain := make(Domain, rangeLength, rangeLength)
+	domain := make(Domain, rangeLength)
 	for i := int(0); i < rangeLength; i++ {
 		domain[i] = float64(i)*step + start
 	}

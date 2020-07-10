@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gnboorse/centipede"
+	"github.com/tommyknows/centipede"
 )
 
 // Sudoku implementation of a Sudoku puzzle solver. The particular puzzle being
